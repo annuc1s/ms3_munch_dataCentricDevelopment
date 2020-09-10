@@ -120,3 +120,15 @@ footer h2{
     text-shadow: 2px 2px 3px rgb(245, 224, 224);
     font-family: 'Do Hyeon', sans-serif;
 }
+
+/*---------------About*/
+
+#about h2{
+    font-family: 'Do Hyeon', sans-serif;
+    text-transform: uppercase;
+    color: rgb(75, 51, 51);
+    padding-top: 30px;
+    font-size: 40px;
+    text-shadow: 2px 2px 3px rgb(209, 178, 178);
+    text-align: center;
+}
