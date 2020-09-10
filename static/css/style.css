@@ -50,3 +50,9 @@ header{
 }
 
 /*---------------Footer */
+
+#google-location{
+    height: 300px;
+    width: 300px;
+    border: 1.5px solid black; 
+}
