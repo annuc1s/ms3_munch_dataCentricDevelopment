@@ -13,7 +13,9 @@
 /*---------------Navigation Bar */
 header{
     min-height: 80px;
-    background-color: rgb(12, 1, 1);   
+    background-color: rgb(12, 1, 1);  
+    position: fixed;
+    width: 100%; 
 }
 
 #logo a{
