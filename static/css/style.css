@@ -9,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/*---------------base.html */
 /*---------------Navigation Bar */
 header{
     min-height: 80px;
@@ -96,4 +97,26 @@ footer h2{
 
 .column{
     flex: 50%;
+}
+
+/*---------------index.html */
+/*---------------hero-image and slogan*/
+#hero-image{
+    height:500px;
+    background-color: brown;
+    background-image: url('static/img/hero-image.jpg');
+}
+
+.slogan{
+    text-align: center;
+    padding-top: 190px;
+}
+
+.slogan h3{ 
+    color: white; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    font-size: 70px;
+    text-shadow: 2px 2px 3px rgb(245, 224, 224);
+    font-family: 'Do Hyeon', sans-serif;
 }
