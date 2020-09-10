@@ -27,7 +27,7 @@
 	
 		<!--Contact-form layout with content-->
 		<div class="get-in-touch">
-			<form>
+			<form onsubmit="return sendMail(this);">
 				<div class="row">
 				<div class="column">
 					<input type="text" id="fname" name="firstname" placeholder="First Name" required>
