@@ -10,8 +10,20 @@
 }
 
 /*---------------Navigation Bar */
-#navigation-container{
-  
+header{
+    min-height: 80px;
+    background-color: rgb(12, 1, 1);   
+}
+
+#logo a{
+    float: left;
+    font-size: 35px;
+    font-family: 'Do Hyeon', sans-serif;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
 }
 
 #nav-bar{
@@ -19,9 +31,8 @@
     font-family: 'Do Hyeon', sans-serif;
     font-size: 25px;
     padding-right: 20px;
-    padding-top: 20px;
-    font-weight: 400;
-    background-color: rgb(12, 1, 1);  
+    padding-top: 24px;
+    font-weight: 400; 
 }
 
 #nav-bar ul{
