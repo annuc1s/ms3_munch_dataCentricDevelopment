@@ -8,3 +8,32 @@
   border: 0;
   box-sizing: border-box;
 }
+
+/*---------------Navigation Bar */
+#navigation-container{
+  
+}
+
+#nav-bar{
+    float: right;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 25px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-weight: 400;
+    background-color: rgb(12, 1, 1);  
+}
+
+#nav-bar ul{
+    list-style-type: none;
+}
+
+#nav-bar ul li{
+    display: inline;
+}
+
+.nav-btn{
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+}
