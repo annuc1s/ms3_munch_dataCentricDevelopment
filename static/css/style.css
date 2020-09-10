@@ -132,3 +132,20 @@ footer h2{
     text-shadow: 2px 2px 3px rgb(209, 178, 178);
     text-align: center;
 }
+
+#about p{
+    padding: 20px;
+    font-family: 'Gothic A1', sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.border {
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1.5px solid black;  
+    margin-bottom: 30px;
+}
+
+
