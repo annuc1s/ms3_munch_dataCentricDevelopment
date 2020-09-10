@@ -123,7 +123,7 @@ footer h2{
 
 /*---------------About*/
 
-#about h2, #contact-form h2{
+#about h2, #contact-form h2, #menu h2{
     font-family: 'Do Hyeon', sans-serif;
     text-transform: uppercase;
     color: rgb(75, 51, 51);
@@ -147,6 +147,17 @@ footer h2{
     border: 1.5px solid black;  
 
 }
+
+/*---------------Menu*/
+
+#menu img {
+    padding-top: 30px;
+    height: auto;
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 80%;
+}
+
 
 /*---------------Contact*/
 
