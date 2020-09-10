@@ -52,6 +52,17 @@ header{
 /*---------------Footer */
 footer{
     background-color:  rgb(12, 1, 1); 
+    padding-bottom: 30px;
+}
+
+footer h2{
+    font-family: 'Do Hyeon', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 30px;
+    font-size: 40px;
+    text-shadow: 2px 2px 3px ;
+    text-align: center;
 }
 
 #contact-details{
@@ -71,7 +82,7 @@ footer{
 #google-location{
     height: 200px;
     width: 200px;
-    border: 1.5px solid rgba(209, 178, 178, 0.5);
+    border: 1.5px solid rgb(209, 178, 178, 0.5);
     margin-left: 10%; 
     margin-right: 10%;
     
