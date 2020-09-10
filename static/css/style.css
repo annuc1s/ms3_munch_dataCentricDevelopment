@@ -60,6 +60,8 @@ footer{
     padding-left: 10%;
     font-family: 'Gothic A1', sans-serif;  
     color: white;
+    margin-right: 10%;
+    padding-top: 20px;
 }
 
 #contact-details p{
@@ -69,7 +71,10 @@ footer{
 #google-location{
     height: 200px;
     width: 200px;
-    border: 1.5px solid black; 
+    border: 1.5px solid rgba(209, 178, 178, 0.5);
+    margin-left: 10%; 
+    margin-right: 10%;
+    
 }
 
 /*--------------- 2 column layout for google-locations and contact-detail*/
