@@ -52,7 +52,17 @@ header{
 /*---------------Footer */
 
 #google-location{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     border: 1.5px solid black; 
+}
+
+/*--------------- 2 column layout for google-locations and contact-detail*/
+.row{
+    display: flex;
+    padding-top: 30px;
+}
+
+.column{
+    flex: 50%;
 }
