@@ -1,3 +1,10 @@
-#nav-bar{
-    font-size: 70px;
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gothic+A1:500 700&display=swap');
+
+
+/*----------------sets default margins and padding for all page content to */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
