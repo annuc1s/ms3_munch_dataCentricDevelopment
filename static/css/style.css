@@ -50,6 +50,21 @@ header{
 }
 
 /*---------------Footer */
+footer{
+    background-color:  rgb(12, 1, 1); 
+}
+
+#contact-details{
+    line-height: 25px;
+    text-align: left;
+    padding-left: 10%;
+    font-family: 'Gothic A1', sans-serif;  
+    color: white;
+}
+
+#contact-details p{
+    padding-left: 50px;
+}
 
 #google-location{
     height: 200px;
