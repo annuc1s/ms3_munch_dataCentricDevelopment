@@ -150,3 +150,29 @@ footer h2{
 
 /*---------------Contact*/
 
+form{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.get-in-touch input[type=text],  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid black;
+    box-sizing: border-box;
+    margin-bottom: 1%;
+    resize: vertical; 
+    font-family: 'Gothic A1', sans-serif;
+}
+
+input#fname{
+    width: 99%;
+    float: left;
+    margin-bottom: 1%;
+}
+
+input#lname {
+    width: 99%;
+    float: right;
+}
+
