@@ -229,4 +229,19 @@ input#lname {
         text-decoration: none;
     }
 
+    #nav-bar{
+        display: none; 
+        position: unset;
+        width: 100%;
+        padding-top: 0px;
+        line-height: 30px;
+        padding-bottom: 20px;
+    }
+  
+    #nav-bar ul li {
+        display: block;
+        text-align: right;
+        font-size: 1.3rem;
+    
+    }
 }
