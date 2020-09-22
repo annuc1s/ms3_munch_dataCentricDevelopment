@@ -208,3 +208,19 @@ input#lname {
     transition: 0.5s;
 }
 
+/*---------------------Responsive Sizing*/
+
+@media screen and (max-width: 900px){
+    .icon i{
+        display: block;
+        float: right;
+        margin: 20px;
+    }
+    .icon {
+        font-size: 30px;
+        padding-right: 20px;
+        padding-top: 20px;
+        color: white;
+        text-decoration: none;
+    }
+}
