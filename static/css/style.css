@@ -223,4 +223,9 @@ input#lname {
         color: white;
         text-decoration: none;
     }
+
+    #nav-bar{
+        display: none; 
+        position: absolute;
+    }
 }
