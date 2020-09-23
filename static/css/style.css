@@ -95,6 +95,9 @@ footer h2{
     
 }
 
+#footer-responsive{
+    display: none;
+}
 /*--------------- 2 column layout for google-locations and contact-detail*/
 .row{
     display: flex;
@@ -243,6 +246,30 @@ input#lname {
         display: block;
         text-align: right;
         font-size: 1.3rem;
-    
+    }
+}
+
+@media screen and (max-width: 760px){
+    #contact-details{
+        display: none;
+    }
+    #google-location{
+        width: 100%;
+    }
+    #footer-responsive{
+        font-family: 'Gothic A1', sans-serif;
+        display: contents;
+        text-align: center;
+        padding-top: 30px;
+        line-height: 20px;
+        color: white;
+    }
+
+    #footer-responsive h3{
+        text-transform: uppercase;
+    }
+
+    #footer-responsive h3{
+        padding-top: 20px;
     }
 }
