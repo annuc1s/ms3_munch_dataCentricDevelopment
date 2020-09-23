@@ -109,8 +109,9 @@ footer h2{
 /*---------------hero-image and slogan*/
 #hero-image{
     height:500px;
-    background-color: brown;
-    background-image: url('static/img/hero-image.jpg');
+    background-image: url("static/img/ms3-hero-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .slogan{
