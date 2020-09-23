@@ -98,6 +98,19 @@ footer h2{
 #footer-responsive{
     display: none;
 }
+
+#social-media i{ 
+    color: white;
+    padding-top: 30px;
+    font-size: 40px;
+    text-shadow: 2px 2px 3px rgb(75, 51, 51);
+    letter-spacing: 7px;
+}
+
+#social-media {
+    text-align: center;    
+}
+
 /*--------------- 2 column layout for google-locations and contact-detail*/
 .row{
     display: flex;
