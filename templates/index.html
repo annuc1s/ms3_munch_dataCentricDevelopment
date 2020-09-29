@@ -24,6 +24,13 @@
 <!--Image of the menu-->
 	<section id="menu">
 		<h2>Menu</h2>
+        <!--Looping through the MONGO collection-->
+        {% for item in items %}
+            {{item.category_name}}
+            {{item.item_heading}}
+            {{item.item_description}}
+            {{item.item_price}}
+        {% endfor %}
 		<img src="static/img/munch-menu.jpg" alt="munch lunch menu serving the finest burgers everyday from 12pm to 5pm">
     </section>
 
