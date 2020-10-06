@@ -16,7 +16,10 @@ mongo = PyMongo(app)
 
 def get_snacks():
 #call items from MONGO collection menu_items
-    return render_template("index.html", snacks=mongo.db.appetizers_snacks.find(), burgers=mongo.db.menu_items.find() )
+    return render_template("index.html", 
+        snacks=mongo.db.appetizers_snacks.find(), 
+        burgers=mongo.db.gourmet_burgers.find(),
+         )
 
 
 @app.route('/get_burgers')
