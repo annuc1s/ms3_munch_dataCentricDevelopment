@@ -23,13 +23,6 @@ def get_snacks():
         milkshakes=mongo.db.milkshakes.find(),
     )
 
-
-@app.route('/get_burgers')
-
-def get_burgers():
-    return render_template("index.html", burgers=mongo.db.menu_items.find())
-
-
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),

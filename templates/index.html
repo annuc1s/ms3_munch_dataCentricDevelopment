@@ -2,93 +2,100 @@
 {% block content %}
 
 <!--Hero Image and slogan-->
-    <div id="hero-image">
-        <div class="slogan">
-			<h3>We will save you a seat</h3>
-		</div>
-    </div>
+<div id="hero-image">
+	<div class="slogan">
+		<h3>We will save you a seat</h3>
+	</div>
+</div>
 
 <!--Information about the business and link to contact page-->
-	<section id="about">
-		<h2>Our Story</h2>
-		<div class="border">
-			<p>We are located on the picturesque west coast of Ireland, serving the finest gourmet burgers
-				since 2018. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Fugit, facere ducimus! Culpa deleniti pariatur,
-				expedita itaque id, asperiores officiis dolorem qui in modi nemo ullam beatae repellendus aut commodi
-				rerum.
-			</p>
-		</div>
-	</section>
+<section id="about">
+	<h2>Our Story</h2>
+	<div class="border">
+		<p>We are located on the picturesque west coast of Ireland, serving the finest gourmet burgers
+			since 2018. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Fugit, facere ducimus! Culpa deleniti pariatur,
+			expedita itaque id, asperiores officiis dolorem qui in modi nemo ullam beatae repellendus aut commodi
+			rerum.
+		</p>
+	</div>
+</section>
 
 <!--Image of the menu-->
-	<section id="menu">
-		<h2>Menu</h2>
-    <div class="appetizers">
-        <h1>Snacks & Appetizers</h1>
-        <!--Looping through the MONGO collection-->
-        {% for snack in snacks %}
-            <ul>
-                <li><h4>{{snack.item_heading}} {{snack.item_price}}</h4>
-                    <p>{{snack.item_description}}</p>
-                </li>
-            </ul>  
-        {% endfor %}
-    </div>
-    <div class="burgers">
-        <h1>Gourmet Burgers</h1>
-    	{% for burger in burgers %}
-            <ul>
-                <li><h4>{{burger.item_heading}} {{burger.item_price}}</h4>
-                    <p>{{burger.item_description}}</p>
-                </li>
-            </ul>  
-        {% endfor %}
-    </div>
-    
-        <div class="toppings">
-        <h1>Toppings</h1>
-    	{% for top in toppings %}
-            <ul>
-                <li><h4>{{top.item_heading}} {{top.item_price}}</h4></li>
-            </ul>  
-        {% endfor %}
-    </div>
-        <div class="milkshakes">
-        <h1>Milkshakes</h1>
-    	{% for shake in milkshakes %}
-            <ul>
-                <li><h4>{{shake.item_heading}} {{shake.item_price}}</h4></li>
-            </ul>  
-        {% endfor %}
-    </div>
-		<img src="static/img/munch-menu.jpg" alt="munch lunch menu serving the finest burgers everyday from 12pm to 5pm">
+<section id="menu">
+	<h2>Menu</h2>
+	<div class="border">
+		<div class="appetizers">
+			<h1>Snacks & Appetizers</h1>
+			<!--Looping through the MONGO collection-->
+			{% for snack in snacks %}
+			<ul>
+				<li>
+					<h4>{{snack.item_heading}} {{snack.item_price}}</h4>
+				</li>
+			</ul>
+			{% endfor %}
+		</div>
+		<div class="burgers">
+			<h1>Gourmet Burgers</h1>
+			{% for burger in burgers %}
+			<ul>
+				<li>
+					<h4>{{burger.item_heading}} {{burger.item_price}}</h4>
+					<p>{{burger.item_description}}</p>
+				</li>
+			</ul>
+			{% endfor %}
+		</div>
+	
+		<div class="toppings">
+			<h1>Toppings</h1>
+			{% for top in toppings %}
+			<ul>
+				<li>
+					<h4>{{top.item_heading}} {{top.item_price}}</h4>
+				</li>
+			</ul>
+			{% endfor %}
+		</div>
+		<div class="milkshakes">
+			<h1>Milkshakes</h1>
+			{% for shake in milkshakes %}
+			<ul>
+				<li>
+					<h4>{{shake.item_heading}} {{shake.item_price}}</h4>
+				</li>
+			</ul>
+			{% endfor %}
+		</div>
+	</div>
+	<img src="static/img/munch-menu.jpg" alt="munch lunch menu serving the finest burgers everyday from 12pm to 5pm">
     </section>
 
-<!--Contact section, with a contact form-->
+	<!--Contact section, with a contact form-->
 	<section id="contact-form">
 		<h2>Get in touch</h2>
-	
+
 		<!--Contact-form layout with content-->
 		<div class="get-in-touch">
 			<form onsubmit="return sendMail(this);">
 				<div class="row">
-				<div class="column">
-					<input type="text" id="fname" name="firstname" placeholder="First Name" required>
+					<div class="column">
+						<input type="text" id="fname" name="firstname" placeholder="First Name" required>
 				</div>
-				<div class="column">
-					<input type="text" id="lname" name="lastname" placeholder="Second Name" required>
+						<div class="column">
+							<input type="text" id="lname" name="lastname" placeholder="Second Name" required>
 				</div>
-				</div>
-					<input type="text" id="email" name="email" placeholder="Email" required>
-					<input type="text" id="subject" name="subject" placeholder="Subject" required>
-					<textarea name="message" id="message" rows="10" placeholder="Message Here..." required></textarea>
-					<input type="submit" value="Submit" class="reset">
+						</div>
+						<input type="text" id="email" name="email" placeholder="Email" required>
+						<input type="text" id="subject" name="subject" placeholder="Subject" required>
+						<textarea name="message" id="message" rows="10" placeholder="Message Here..." required></textarea>
+						<input type="submit" value="Submit" class="reset">
 			</form>
-		</div>
+					</div>
 	</section>
 
-    <!--Location of EmailJS script-->
+	<!--Location of EmailJS script-->
 	<script src="static/js/sendEmail.js"></script>
 
 	<!--Contact form linked to EmailJS-->
@@ -99,4 +106,4 @@
         })();
 	</script>
 
-{% endblock %}
+	{% endblock %}
