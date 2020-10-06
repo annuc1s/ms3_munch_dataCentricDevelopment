@@ -20,6 +20,7 @@ def get_snacks():
         snacks=mongo.db.appetizers_snacks.find(), 
         burgers=mongo.db.gourmet_burgers.find(),
         toppings=mongo.db.toppings_sides.find(),
+        milkshakes=mongo.dbmilkshakes.find(),
     )
 
 
