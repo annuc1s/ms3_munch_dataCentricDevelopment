@@ -24,15 +24,30 @@
 <!--Image of the menu-->
 	<section id="menu">
 		<h2>Menu</h2>
+    <div class="appetizers">
+        <h1>Snacks & Appetizers</h1>
         <!--Looping through the MONGO collection-->
-        {% for item in items %}
-            
-            <ul><h3>{{item.category_name}}</h3>
-                <li><h4>{{item.item_heading}} {{item.item_price}}</h4>
-                    <p>{{item.item_description}}</p>
+        {% for snack in snacks %}
+            <h3>{{snack.category_name}}</h3>
+            <ul>
+                <li><h4>{{snack.item_heading}} {{snack.item_price}}</h4>
+                    <p>{{snack.item_description}}</p>
                 </li>
             </ul>  
         {% endfor %}
+    </div>
+    <div class="burgers">
+        <h1>Gourmet Burgers</h1>
+    	{% for burger in burgers %}
+            <h3>{{burger.category_name}}</h3>
+            <ul>
+                <li><h4>{{burger.item_heading}} {{burger.item_price}}</h4>
+                    <p>{{burger.item_description}}</p>
+                </li>
+            </ul>  
+        {% endfor %}
+    </div>
+
 		<img src="static/img/munch-menu.jpg" alt="munch lunch menu serving the finest burgers everyday from 12pm to 5pm">
     </section>
 
