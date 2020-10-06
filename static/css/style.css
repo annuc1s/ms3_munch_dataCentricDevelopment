@@ -181,6 +181,26 @@ footer h2{
     width: 80%;
 }
 
+#menu ul{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#menu ul li {
+    list-style: none;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+#menu h1 {
+    font-family: 'Do Hyeon', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+#menu.item_price {
+    float:right;
+}
+
+
 
 /*---------------Contact*/
 

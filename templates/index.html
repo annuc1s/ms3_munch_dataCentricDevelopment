@@ -25,9 +25,12 @@
 <section id="menu">
 	<h2>Menu</h2>
 	<div class="border">
-		<div class="appetizers">
-			<h1>Snacks & Appetizers</h1>
-			<!--Looping through the MONGO collection-->
+        <div class="row">
+    	<!--Looping through the MONGO collection snacks_appetizers-->
+		<div class="appetizers column">
+	
+            <h1>Snacks & Appetizers</h1>
+		
 			{% for snack in snacks %}
 			<ul>
 				<li>
@@ -36,7 +39,21 @@
 			</ul>
 			{% endfor %}
 		</div>
-		<div class="burgers">
+        <!--Looping through the MONGO collection milkshakes-->
+		<div class="milkshakes column">
+			<h1>Milkshakes</h1>
+			{% for shake in milkshakes %}
+			<ul>
+				<li>
+					<h4>{{shake.item_heading}} {{shake.item_price}}</h4>
+				</li>
+			</ul>
+			{% endfor %}
+		</div>
+        </div>
+        <!--Looping through the MONGO collection gourmet_burgers-->
+        <div class="row">
+		<div class="burgers column">
 			<h1>Gourmet Burgers</h1>
 			{% for burger in burgers %}
 			<ul>
@@ -47,8 +64,8 @@
 			</ul>
 			{% endfor %}
 		</div>
-	
-		<div class="toppings">
+        <!--Looping through the MONGO collection toppings_sides-->
+		<div class="toppings column">
 			<h1>Toppings</h1>
 			{% for top in toppings %}
 			<ul>
@@ -58,16 +75,8 @@
 			</ul>
 			{% endfor %}
 		</div>
-		<div class="milkshakes">
-			<h1>Milkshakes</h1>
-			{% for shake in milkshakes %}
-			<ul>
-				<li>
-					<h4>{{shake.item_heading}} {{shake.item_price}}</h4>
-				</li>
-			</ul>
-			{% endfor %}
-		</div>
+        </div>
+
 	</div>
 	<img src="static/img/munch-menu.jpg" alt="munch lunch menu serving the finest burgers everyday from 12pm to 5pm">
     </section>
