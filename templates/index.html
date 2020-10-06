@@ -46,11 +46,19 @@
         {% endfor %}
     </div>
     
-        <div class="burgers">
+        <div class="toppings">
         <h1>Toppings</h1>
     	{% for top in toppings %}
             <ul>
                 <li><h4>{{top.item_heading}} {{top.item_price}}</h4></li>
+            </ul>  
+        {% endfor %}
+    </div>
+        <div class="milkshakes">
+        <h1>Milkshakes</h1>
+    	{% for shake in milkshakes %}
+            <ul>
+                <li><h4>{{shake.item_heading}} {{shake.item_price}}</h4></li>
             </ul>  
         {% endfor %}
     </div>
