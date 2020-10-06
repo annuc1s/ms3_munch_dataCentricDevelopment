@@ -19,7 +19,8 @@ def get_snacks():
     return render_template("index.html", 
         snacks=mongo.db.appetizers_snacks.find(), 
         burgers=mongo.db.gourmet_burgers.find(),
-        toppings=mongo.db.topping_sides.find(),)
+        toppings=mongo.db.toppings_sides.find(),
+    )
 
 
 @app.route('/get_burgers')

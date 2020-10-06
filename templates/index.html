@@ -28,7 +28,6 @@
         <h1>Snacks & Appetizers</h1>
         <!--Looping through the MONGO collection-->
         {% for snack in snacks %}
-            <h3>{{snack.category_name}}</h3>
             <ul>
                 <li><h4>{{snack.item_heading}} {{snack.item_price}}</h4>
                     <p>{{snack.item_description}}</p>
@@ -39,7 +38,6 @@
     <div class="burgers">
         <h1>Gourmet Burgers</h1>
     	{% for burger in burgers %}
-            <h3>{{burger.category_name}}</h3>
             <ul>
                 <li><h4>{{burger.item_heading}} {{burger.item_price}}</h4>
                     <p>{{burger.item_description}}</p>
@@ -47,7 +45,15 @@
             </ul>  
         {% endfor %}
     </div>
-
+    
+        <div class="burgers">
+        <h1>Toppings</h1>
+    	{% for top in toppings %}
+            <ul>
+                <li><h4>{{top.item_heading}} {{top.item_price}}</h4></li>
+            </ul>  
+        {% endfor %}
+    </div>
 		<img src="static/img/munch-menu.jpg" alt="munch lunch menu serving the finest burgers everyday from 12pm to 5pm">
     </section>
 
