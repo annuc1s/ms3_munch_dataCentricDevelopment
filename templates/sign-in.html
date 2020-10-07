@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="log-in-container">
-    <div class="log-in-row">
-        <div class="log-in-img log-in-column">
-            <img src="static/img/log-in.jpg" alt="">
+<div class="log-in-container">
+	<div class="log-in-row">
+		<div class="log-in-img log-in-column">
+			<img src="static/img/log-in.jpg" alt="">
         </div>
-        <div class="log-in-form log-in-column"></div>
-    </div>
-    </div>
+			<div class="log-in-form log-in-column">
+                <h2>Log In</h2>
+				<form>
+					<input type="text" placeholder="Username" name="uname" required>
+					<input type="password" placeholder="Password" name="psw" required>
+					<button type="submit">Login</button>
+				</form>
+                <a href="#">Don't have an account?</a>
+			</div>
+		</div>
+	</div>
 {% endblock %}

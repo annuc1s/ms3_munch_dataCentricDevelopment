@@ -154,7 +154,7 @@ footer h2{
 
 /*---------------About*/
 
-#about h2, #contact-form h2, #menu h2{
+#about h2, #contact-form h2, #menu h2, .log-in-form h2{
     font-family: 'Do Hyeon', sans-serif;
     text-transform: uppercase;
     color: rgb(75, 51, 51);
@@ -237,7 +237,7 @@ form{
     text-align: center;
 }
 
-.get-in-touch input[type=text],  textarea {
+.get-in-touch input[type=text], textarea {
     width: 100%;
     padding: 10px;
     border: 1.5px solid black;
@@ -258,7 +258,7 @@ input#lname {
     float: right;
 }
 
-.get-in-touch input[type=submit]{
+.get-in-touch input[type=submit] {
     font-family: 'Gothic A1', sans-serif;
     cursor: pointer;
     color: white;
@@ -280,9 +280,9 @@ input#lname {
 /*---------------background-colour*/
 
 .log-in-container{
-    margin-left: 20%;
+    margin-left: 15%;
     margin-top: 7.5rem;
-    margin-right: 20%;
+    margin-right: 15%;
     position: fixed;
     height: 120%;
 }
@@ -290,6 +290,7 @@ input#lname {
 .log-in-row{
     display: flex;
     height: 60%;
+    border: 1.5px solid black;
 }
 
 .log-in-column{
@@ -303,7 +304,46 @@ input#lname {
 }
 
 .log-in-form{
-    background-color: blue;
+    padding-top: 30px;
+}
+
+.log-in-form form{
+    padding-top: 50px;
+    line-height: 20px;
+}
+
+.log-in-form a{
+    padding-left: 30%;
+    font-family: 'Gothic A1', sans-serif;
+    color: rgb(75, 51, 51);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid black;
+    box-sizing: border-box;
+    margin-bottom: 3%;
+    resize: vertical; 
+    font-family: 'Gothic A1', sans-serif;
+}
+
+button {
+    font-family: 'Gothic A1', sans-serif;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: rgba(75, 51, 51, 0.5);
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: rgb(75, 51, 51);
+    transition: 0.5s;
 }
 
 
