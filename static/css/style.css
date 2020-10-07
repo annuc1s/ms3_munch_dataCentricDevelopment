@@ -300,6 +300,18 @@ input#lname {
         font-size: 1.3rem;
     }
 
+    #menu .row {
+        display: block;
+    }
+
+    .milkshakes {
+        padding-top: 30px;
+    }
+
+    .toppings{
+        padding-bottom: 30px;
+    }
+
 }
 
 @media screen and (max-width: 760px){
@@ -325,5 +337,17 @@ input#lname {
 
     #footer-responsive h3{
         padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    .border, form, #google-location{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .slogan{
+        padding-top: 100px;
     }
 }
