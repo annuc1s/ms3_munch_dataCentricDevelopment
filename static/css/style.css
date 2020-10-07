@@ -52,6 +52,14 @@ header{
     color: white;
 }
 
+.book-tbl{
+    margin-left: 5px;
+    border: 2px solid white;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+
 .icon i{
     display: none;
 }
