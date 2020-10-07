@@ -152,6 +152,22 @@ footer h2{
     font-family: 'Do Hyeon', sans-serif;
 }
 
+.book-now{
+    margin-top: 50px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: rgba(245, 224, 224, 0.5);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.book-now:hover{
+    background-color: rgb(75, 51, 51);
+    transition: 0.5s;
+}
 /*---------------About*/
 
 #about h2, #contact-form h2, #menu h2, .log-in-form h2{
@@ -313,9 +329,9 @@ input#lname {
 }
 
 .log-in-form a{
-    padding-left: 30%;
     font-family: 'Gothic A1', sans-serif;
     color: rgb(75, 51, 51);
+    text-align: center;
 }
 
 input[type=text], input[type=password] {
