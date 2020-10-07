@@ -29,23 +29,24 @@
     	<!--Looping through the MONGO collection snacks_appetizers-->
 		<div class="appetizers column">
 	
-            <h1>Snacks & Appetizers</h1>
-		
+            <h3>Snacks & Appetizers</h3>
+            <hr>
 			{% for snack in snacks %}
 			<ul>
 				<li>
-					<h4>{{snack.item_heading}} {{snack.item_price}}</h4>
+					<h4>{{snack.item_heading}} <b>€ {{snack.item_price}}</b></h4>
 				</li>
 			</ul>
 			{% endfor %}
 		</div>
         <!--Looping through the MONGO collection milkshakes-->
 		<div class="milkshakes column">
-			<h1>Milkshakes</h1>
+			<h3>Milkshakes</h3>
+            <hr>
 			{% for shake in milkshakes %}
-			<ul>
+			<ul>      
 				<li>
-					<h4>{{shake.item_heading}} {{shake.item_price}}</h4>
+					<h4>{{shake.item_heading}} <b>€ {{shake.item_price}}</b></h4>     
 				</li>
 			</ul>
 			{% endfor %}
@@ -54,31 +55,31 @@
         <!--Looping through the MONGO collection gourmet_burgers-->
         <div class="row">
 		<div class="burgers column">
-			<h1>Gourmet Burgers</h1>
+			<h3>Gourmet Burgers</h3>
+            <hr>
 			{% for burger in burgers %}
 			<ul>
 				<li>
-					<h4>{{burger.item_heading}} {{burger.item_price}}</h4>
-					<p>{{burger.item_description}}</p>
+					<h4>{{burger.item_heading}} <b>€ {{burger.item_price}}</b></h4>
+					<p><i>{{burger.item_description}}</i></p>
 				</li>
 			</ul>
 			{% endfor %}
 		</div>
         <!--Looping through the MONGO collection toppings_sides-->
 		<div class="toppings column">
-			<h1>Toppings</h1>
+			<h3>Toppings</h3>
+            <hr>
 			{% for top in toppings %}
 			<ul>
 				<li>
-					<h4>{{top.item_heading}} {{top.item_price}}</h4>
+					<h4>{{top.item_heading}} <b>€ {{top.item_price}}</b></h4>
 				</li>
 			</ul>
 			{% endfor %}
 		</div>
         </div>
-
 	</div>
-	<img src="static/img/munch-menu.jpg" alt="munch lunch menu serving the finest burgers everyday from 12pm to 5pm">
     </section>
 
 	<!--Contact section, with a contact form-->
