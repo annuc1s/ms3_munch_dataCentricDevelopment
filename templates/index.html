@@ -106,8 +106,39 @@
 					</div>
 	</section>
 
+    <footer>
+	<h2>Find us</h2>
+    <div class="row">
+	    <div id="google-location" class="column"></div>
+	    <div id="contact-details" class="column" >
+		    <b>Phone:</b> +353711234567 <br>
+		    <b>Email:</b> lunch@munch.ie <br>
+		    <b>Address:</b><br>
+		    <p>Munch,O'Connell St.,<br> Sligo, Co.Sligo <br>Ireland</p>
+	    </div>
+
+    </div>        
+    <div id="footer-responsive">
+		<h3>Munch, O'Connell St, Sligo, Co.Sligo</h3><br>
+		<h4>+353711234567 | <i>lunch@munch.ie</i></h4>
+	</div>
+    <div id="social-media">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+		<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+		<a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+    </div>
+</footer>
+
 	<!--Location of EmailJS script-->
 	<script src="static/js/sendEmail.js"></script>
+
+    <!--Location of Google Maps API script-->
+    <script src="static/js/googleMaps.js"></script>
+
+    <!--Load Google API from the specified URL with custom APIKEY-->
+	<script defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtVUKreFqu4NdtKT_ExJHoPTyC9YaZKk&callback=initMap">
+	</script>
 
 	<!--Contact form linked to EmailJS-->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>

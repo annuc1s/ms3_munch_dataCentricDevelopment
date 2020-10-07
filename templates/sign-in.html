@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="background-colour">
-        <div class="container">
-            <div class="row">
-                <div class="sign-in-img column"></div>
-                <div class="sign-in-form column"></div>
-            </div>
-    </div>
-    </div>
+
+
+<form action="/action_page.php" method="post">
+
+  <div class="sign-in-container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+  </div>
+</form>
+
 {% endblock %}
