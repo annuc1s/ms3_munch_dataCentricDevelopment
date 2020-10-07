@@ -12,9 +12,9 @@ app.config["MONGO_URI"] = 'mongodb+srv://RGz8TLF1RmPmQvu9:MunCH_ms3@cluster0.gsp
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_snacks')
+@app.route('/get_menu')
 
-def get_snacks():
+def get_menu():
 #call items from MONGO collection menu_items
     return render_template("index.html", 
         snacks=mongo.db.appetizers_snacks.find(), 
@@ -22,6 +22,11 @@ def get_snacks():
         toppings=mongo.db.toppings_sides.find(),
         milkshakes=mongo.db.milkshakes.find(),
     )
+
+@app.route('/sign_in')
+
+def sign_in():
+    return render_template ("sign-in.html")
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
