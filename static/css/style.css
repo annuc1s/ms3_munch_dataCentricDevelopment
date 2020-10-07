@@ -276,6 +276,22 @@ input#lname {
     transition: 0.5s;
 }
 
+/*---------------sign-in.html */
+/*---------------background-colour*/
+
+.background-colour{
+    background-color:   rgb(36, 32, 32);
+    height: 600px;
+}
+.container{
+    border: 1.5px solid white;
+    height: 300px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
 /*---------------------Responsive Sizing*/
 
 @media screen and (max-width: 900px){
