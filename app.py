@@ -8,8 +8,11 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'munch_menu'
 app.config["MONGO_URI"] = 'mongodb+srv://RGz8TLF1RmPmQvu9:MunCH_ms3@cluster0.gsp9j.mongodb.net/munch_menu?retryWrites=true&w=majority'
 
-#app added using the constructor method
+
+#variables used throughout the app
 mongo = PyMongo(app)
+
+
 
 @app.route('/')
 @app.route('/get_menu')
@@ -23,10 +26,13 @@ def get_menu():
         milkshakes=mongo.db.milkshakes.find(),
     )
 
-@app.route('/sign_in')
-
+@app.route('/sign_in', methods= ['POST', 'GET'])
 def sign_in():
-    return render_template ("sign-in.html")
+    return render_template ("sign-in.html",
+        users = mongo.db.users.find()
+        )
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
