@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for
+import bcrypt
+from flask import Flask, render_template, request, redirect, url_for, session
 from flask_pymongo import PyMongo 
 from bson.objectid import ObjectId 
 
@@ -28,11 +29,9 @@ def get_menu():
 
 @app.route('/sign_in', methods= ['POST', 'GET'])
 def sign_in():
-    return render_template ("sign-in.html",
-        users = mongo.db.users.find()
+    if request.method == "POST":
+        user_login = users.find_one({'name'})
         )
-
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

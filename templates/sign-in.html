@@ -7,9 +7,9 @@
         </div>
 			<div class="log-in-form log-in-column">
                 <h2>Log In</h2>
-				<form>
+				<form method="POST" action="{{ url_for('sign_in') }}">
 					<input type="text" placeholder="Username" name="uname" required>
-					<input type="password" placeholder="Password" name="psw" required>
+					<input type="password" placeholder="Password" name="pass" required>
 					<button type="submit">Login</button>
 				</form>   
                    <button class="register-button" onclick="document.getElementById('modal-form').style.display='block'" style="width:auto;">Don't have an account?</button>       
