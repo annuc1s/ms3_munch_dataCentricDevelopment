@@ -11,28 +11,29 @@
 					<input type="text" placeholder="Username" name="uname" required>
 					<input type="password" placeholder="Password" name="psw" required>
 					<button type="submit">Login</button>
-				</form>            
+				</form>   
+                   <button class="register-button" onclick="document.getElementById('modal-form').style.display='block'" style="width:auto;">Don't have an account?</button>       
 			</div>
 		</div>
-         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+        
 	</div>
    
-    <div id="id01" class="modal-container">
+    <div id="modal-form" class="modal-container">
         <form>
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('modal-form').style.display='none'" class="close" title="Close Modal">&times;</span>
             <h2>Create Account</h2>            
 			<input type="text" placeholder="Username" name="uname" required>
 			<input type="password" placeholder="Password" name="psw" required>
             <input type="password" placeholder="Repeat Password" name="psw" required>
 			<button type="submit">Register</button>
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
         </form>
     </div>
 
     
 <script>
 // Get the modal
-var modal = document.getElementById('id01');
+var modal = document.getElementById('modal-form');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
