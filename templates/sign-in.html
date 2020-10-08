@@ -18,12 +18,12 @@
 	</div>
    
     <div id="modal-form" class="modal-container">
-        <form>
+        <form method="POST" action="{{ url_for('sign_up') }}">
             <span onclick="document.getElementById('modal-form').style.display='none'" class="close" title="Close Modal">&times;</span>
             <h2>Create Account</h2>            
-			<input type="text" placeholder="Username" name="uname" required>
-			<input type="password" placeholder="Password" name="psw" required>
-            <input type="password" placeholder="Confirm Password" name="psw" required>
+			<input type="text" placeholder="Username" name="username" required>
+			<input type="password" placeholder="Password" name="pass" required>
+            <input type="password" placeholder="Confirm Password" name="pass" required>
 			<button type="submit">Register</button>
             <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
         </form>
