@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-    
+<div id="reserve-table">
+    <h2>Make a reservation</h2>
+    <form>
+        <input type="date">
+        <input type="time">
+        <select name="party_size" id="no_people">
+            <option value="select no of people">select</option>
+            <option value="">2</option>
+        </select>
+        <input type="text" placeholder="additional info">
+        <button>Reserve Now</button>
+    </form>
+</div>
 {% endblock %}

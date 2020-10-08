@@ -170,7 +170,7 @@ footer h2{
 }
 /*---------------About*/
 
-#about h2, #contact-form h2, #menu h2, .log-in-form h2, .modal-container h2{
+#about h2, #contact-form h2, #menu h2, .log-in-form h2, .modal-container h2, #reserve-table h2{
     font-family: 'Do Hyeon', sans-serif;
     text-transform: uppercase;
     color: rgb(75, 51, 51);
@@ -437,6 +437,26 @@ button:hover {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
+
+/*---------------------book-tbl.html*/
+
+#reserve-table{
+    margin-left: 15%;
+    margin-top: 6rem;
+    margin-right: 15%;
+    position: fixed;
+    z-index: -1;
+    padding: 0;
+}
+
+#reserve-table form{
+    display: grid;
+}
+
+#reserve-table form{
+    padding-top: 30px;
+}
+
 /*---------------------Responsive Sizing*/
 
 @media screen and (max-width: 900px){
