@@ -301,6 +301,7 @@ input#lname {
     margin-right: 15%;
     position: fixed;
     height: 120%;
+    z-index: -1;
 }
 
 .log-in-row{
