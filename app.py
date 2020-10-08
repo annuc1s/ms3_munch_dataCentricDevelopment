@@ -26,10 +26,25 @@ def get_menu():
         milkshakes=mongo.db.milkshakes.find(),
     )
 
-@app.route('/sign_in', methods= ['POST', 'GET'])
-def sign_in():
-    return render_template ("sign-in.html")
+@app.route('/log_in')
+def log_in():
+    return render_template("sign-in.html")
 
+# Routing through existing users and decrypting their password from database
+@app.route('/sign_in', methods= ['POST'])
+def sign_in():
+    users = mongo.db.users
+    login_user = users.find_one({'name' : request.form['username']})
+    #Compares the detailes entered with details in database from registering
+    if login_user:
+        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), 
+            login_user['password']
+            ) == login_user['password']:
+            session['username'] = request.form['username']
+            #If the details entered match it will redirect the user book_table
+            return redirect(url_for('book_table'))
+
+    return 'Invalid username/password combination'
 
 # Routing through registering a new user and encrypting their password for security
 @app.route('/sign_up', methods= ['POST', 'GET'])
