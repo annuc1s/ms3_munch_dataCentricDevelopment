@@ -80,8 +80,6 @@ def book_table():
 #Allows reservation form to be submitted
 #and stores data in MongoDB within a reservations collection
 #after successful submission, the user is redirected to edit_reservation
-
-
 @app.route('/reserve_table', methods=['POST'])
 def reserve_table():
 
@@ -115,11 +113,6 @@ def delete_reservation(reservations_id):
 
     return redirect(url_for('book_table'))
 
-
-#Routing from review_reservation to edit_reservation
-@app.route('/edit_reservation')
-def edit_reservation():
-    return render_template('edit-reservation.html')
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
