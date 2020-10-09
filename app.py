@@ -81,8 +81,12 @@ def book_table():
 def reserve_table():
     reservations = mongo.db.reservations
     reservations.insert_one(request.form.to_dict())
-    return redirect(url_for('sign_in'))
+    return redirect(url_for('edit_reservation'))
 
+#Creates a route to edit-reservation.html
+@app.route('/edit_reservation')
+def edit_reservation():
+    return render_template('edit-reservation.html')
 
 
 if __name__ == '__main__':
