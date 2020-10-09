@@ -4,8 +4,8 @@
 <div id="edit-reservation">
 	<h2>Your Reservation</h2>
 	<form action="" method="GET">
-		<input type="text" placeholder="Name" name="reservation_name" id="reservation_name">
-		<input type="text" placeholder="Contact Number" name="contact_number" id="contact_number">
+		<input disabled value="{{ reservations.reservation_name }}" type="text" placeholder="Name" name="reservation_name" id="reservation_name">
+		<input value="" type="text" placeholder="Contact Number" name="contact_number" id="contact_number">
 		<input type="date" name="reservation_date" id="reservation_date">
 		<input type="time" name="reservation_time" id="reservation_time">
 		<!--Looping through database to bring up party size selection-->

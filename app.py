@@ -107,9 +107,9 @@ def reserve_table():
         "party_size": request.form.get("party_size"),
         "additional_info": request.form.get("additional_info")
     }
-    reservations.insert_one(make_reservation)
+    id=reservations.insert_one(make_reservation)
     #reservations.insert_one(request.form.to_dict())
-    return redirect(url_for('review_reservation'))
+    return redirect(url_for('view_reservation', reservations_id=id.inserted_id))
 
 
 @app.route('/review_reservation')
@@ -117,10 +117,10 @@ def review_reservation():
     return render_template('review-reservation.html')
 
 
-"""@app.route('/review_reservation/<reservations_id>', methods=['GET'])
-def review_reservation(reservations_id):
-    reserved = mongo.db.reservations.find_one({'_id': ObjectId(reservations._id)})
-    return render_template('review-reservation.html', reservations=reserved)"""
+@app.route('/view_reservation/<reservations_id>', methods=['GET'])
+def view_reservation(reservations_id):
+    reserved = mongo.db.reservations.find_one({'_id': ObjectId(reservations_id)})
+    return render_template('review-reservation.html', reservations=reserved)
 
 
 #Allows the user to delete their reservation from the database
