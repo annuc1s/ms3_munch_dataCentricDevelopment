@@ -79,15 +79,39 @@ def book_table():
 #after successful submission, the user is redirected to edit_reservation
 @app.route('/reserve_table', methods=['POST'])
 def reserve_table():
+
     reservations = mongo.db.reservations
-    reservations.insert_one(request.form.to_dict())
-    return redirect(url_for('edit_reservation'))
+    username = session['username']
+    make_reservation = {
+        "username": username,
+        "reservation_name": request.form.get("reservation_name"),
+        "contact_number": request.form.get("contact_number"),
+        "reservation_date": request.form.get("reservation_date"),
+        "reservation_time": request.form.get("reservation_time"),
+        "party_size": request.form.get("party_size"),
+        "additional_info": request.form.get("additional_info")
+    }
+    reservations.insert_one(make_reservation)
+    #reservations.insert_one(request.form.to_dict())
+    return redirect(url_for('review_reservation'))
+  
+@app.route('/review_reservation')
+def review_reservation():
+    return render_template('review-reservation.html')
 
-#Creates a route to edit-reservation.html
-@app.route('/edit_reservation')
-def edit_reservation():
-    return render_template('edit-reservation.html')
+"""@app.route('/review_reservation/<reservations_id>', methods=['GET'])
+def review_reservation(reservations_id):
+    reserved = mongo.db.reservations.find_one({'_id': ObjectId(reservations._id)})
+    return render_template('review-reservation.html', reservations=reserved)"""
 
+
+#Allows the user to delete their reservation from the database
+#Returns them to the url_for('book_table)
+@app.route('/delete_reservation/<reservations_id>')
+def delete_reservation(reservations_id):
+    mongo.db.reservations.remove({'id': ObjectId(reservations_id)})
+
+    return redirect(url_for('book_table'))
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'

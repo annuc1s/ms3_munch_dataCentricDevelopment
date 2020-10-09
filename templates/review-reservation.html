@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+
     <div id="edit-reservation">
-    <h2>Edit Reservation</h2>
-    <form action="{{url_for('reserve_table')}}" method="POST">
+    <h2>Your Reservation</h2>       
+    <form action="" method="GET">
         <input type="text" placeholder="Name" name="reservation_name" id="reservation_name" required>
         <input type="text" placeholder="Contact Number" name="contact_number" id="contact_number" required> 
         <input type="date" name="reservation_date" id="reservation_date" required>
@@ -10,12 +11,14 @@
          <!--Looping through database to bring up party size selection-->
         <select name="party_size" id="party_size" required>
             <option value="" disabled selected>Party Size</option>
-            {% for party in people %}
-            <option value="">{{party.party_size}}</option>
-            {% endfor %}
+            <option value=""></option>
         </select>
         <input type="text" placeholder="Additional Information" name="additional_info" id="additional_info">
-            <button>Save</button> 
+        <div class="row">
+            <button  class="column">Update</button> 
+            <button href="{{ url_for('book_table') }}" class="column">Delete</button>
+        </div>
     </form>
 </div>
+
 {% endblock %}
