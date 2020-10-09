@@ -170,7 +170,7 @@ footer h2{
 }
 /*---------------About*/
 
-#about h2, #contact-form h2, #menu h2, .log-in-form h2, .modal-container h2, #reserve-table h2{
+#about h2, #contact-form h2, #menu h2, .log-in-form h2, .modal-container h2, #reserve-table h2, #edit-reservation h2{
     font-family: 'Do Hyeon', sans-serif;
     text-transform: uppercase;
     color: rgb(75, 51, 51);
@@ -440,7 +440,7 @@ button:hover {
 
 /*---------------------book-tbl.html*/
 
-#reserve-table{
+#reserve-table, #edit-reservation{
     margin-left: 15%;
     margin-top: 6rem;
     margin-right: 15%;
@@ -449,11 +449,8 @@ button:hover {
     padding: 0;
 }
 
-#reserve-table form{
+#reserve-table form, #edit-reservation form{
     display: grid;
-}
-
-#reserve-table form{
     padding-top: 30px;
 }
 
@@ -469,6 +466,20 @@ button:hover {
 
 #reserve-table input[type=date]{
     text-transform: uppercase;
+}
+
+#edit-reservation input[type=date]{
+    text-transform: uppercase;
+}
+
+#edit-reservation input[type=text], input[type=date], input[type=time], select{
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid black;
+    box-sizing: border-box;
+    margin-bottom: 1%;
+    resize: vertical; 
+    font-family: 'Gothic A1', sans-serif;
 }
 /*---------------------Responsive Sizing*/
 
