@@ -113,6 +113,8 @@ def delete_reservation(reservations_id):
 
     return redirect(url_for('book_table'))
 
+
+#Routing from review_reservation to edit_reservation
 @app.route('/edit_reservation')
 def edit_reservation():
     return render_template('edit-reservation.html')
