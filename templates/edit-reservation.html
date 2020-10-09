@@ -15,7 +15,10 @@
             {% endfor %}
         </select>
         <input type="text" placeholder="Additional Information" name="additional_info" id="additional_info">
-            <button>Save</button> 
+        <div class="row">
+            <button  class="column">Update</button> 
+            <button href="{{ url_for('book_table') }}" class="column">Delete</button>
+        </div>
     </form>
 </div>
 {% endblock %}

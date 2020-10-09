@@ -4,20 +4,17 @@
     <div id="edit-reservation">
     <h2>Your Reservation</h2>       
     <form action="" method="GET">
-        <input type="text" placeholder="Name" name="reservation_name" id="reservation_name" required>
-        <input type="text" placeholder="Contact Number" name="contact_number" id="contact_number" required> 
-        <input type="date" name="reservation_date" id="reservation_date" required>
-        <input type="time" name="reservation_time" id="reservation_time" required>
+        <input type="text" placeholder="Name" name="reservation_name" id="reservation_name">
+        <input type="text" placeholder="Contact Number" name="contact_number" id="contact_number"> 
+        <input type="date" name="reservation_date" id="reservation_date">
+        <input type="time" name="reservation_time" id="reservation_time">
          <!--Looping through database to bring up party size selection-->
-        <select name="party_size" id="party_size" required>
+        <select name="party_size" id="party_size">
             <option value="" disabled selected>Party Size</option>
             <option value=""></option>
         </select>
         <input type="text" placeholder="Additional Information" name="additional_info" id="additional_info">
-        <div class="row">
-            <button  class="column">Update</button> 
-            <button href="{{ url_for('book_table') }}" class="column">Delete</button>
-        </div>
+            <button href="{{ url_for('edit_reservation')}}">Edit</button> 
     </form>
 </div>
 

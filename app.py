@@ -113,6 +113,10 @@ def delete_reservation(reservations_id):
 
     return redirect(url_for('book_table'))
 
+@app.route('/edit_reservation')
+def edit_reservation():
+    return render_template('edit-reservation.html')
+
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get('IP'),
