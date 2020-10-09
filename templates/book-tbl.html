@@ -7,13 +7,7 @@
 		<input type="text" placeholder="Contact Number" name="contact_number" id="contact_number" required>
 		<input type="date" name="reservation_date" id="reservation_date" required>
 		<input type="time" name="reservation_time" id="reservation_time" required>
-		<!--Looping through database to bring up party size selection-->
-		<select name="party_size" id="party_size" required>
-            <option value="" disabled selected>Party Size</option>
-            {% for party in people %}
-            <option value="">{{party.party_size}}</option>
-            {% endfor %}
-        </select>
+        <input type="text" placeholder="Party Size 1-6" name="party_size" id="party_size" required>        
 		<input type="text" placeholder="Additional Information" name="additional_info" id="additional_info">
 		<button>Reserve Now</button>
 	</form>
