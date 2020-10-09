@@ -73,6 +73,12 @@ def book_table():
     people=mongo.db.party_size.find()
     )
 
+@app.route('/reserve_table', methods=['POST'])
+def reserve_table():
+    reservations = mongo.db.reservations
+    reservations.insert_one(request.form.to_dict())
+    return redirect(url_for('sign_in'))
+
 
 
 if __name__ == '__main__':
