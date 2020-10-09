@@ -457,6 +457,15 @@ button:hover {
     padding-top: 30px;
 }
 
+#reserve-table input[type=text], input[type=date], input[type=time], select {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid black;
+    box-sizing: border-box;
+    margin-bottom: 1%;
+    resize: vertical; 
+    font-family: 'Gothic A1', sans-serif;
+}
 /*---------------------Responsive Sizing*/
 
 @media screen and (max-width: 900px){
