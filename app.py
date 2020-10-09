@@ -15,6 +15,11 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
+#Route to index.html
+@app.route('/home_page')
+def home_page():
+    return render_template("index.html")
+
 @app.route('/get_menu')
 def get_menu():
     #call items from MONGO collection menu_items
