@@ -6,7 +6,7 @@
 <div id="hero-image" style="background-image: url(static/img/ms3-hero-image.jpg)">
 	<div class="slogan">
 		<h3>We will save you a seat</h3>
-        <a href="{{url_for('sign_in')}}"><button class="book-now">Book Now!</button></a>
+		<a href="{{url_for('sign_in')}}"><button class="book-now">Book Now!</button></a>
 	</div>
 </div>
 
@@ -27,126 +27,126 @@
 <section id="menu">
 	<h2>Menu</h2>
 	<div class="border">
-        <div class="row">
-    	<!--Looping through the MONGO collection snacks_appetizers-->
-		<div class="appetizers column">
-	
-            <h3>Snacks & Appetizers</h3>
-            <hr>
-			{% for snack in snacks %}
-			<ul>
-				<li>
-					<h4>{{snack.item_heading}} <b>€ {{snack.item_price}}</b></h4>
-				</li>
-			</ul>
-			{% endfor %}
+		<div class="row">
+			<!--Looping through the MONGO collection snacks_appetizers-->
+			<div class="appetizers column">
+
+				<h3>Snacks & Appetizers</h3>
+				<hr>
+				{% for snack in snacks %}
+				<ul>
+					<li>
+						<h4>{{snack.item_heading}} <b>€ {{snack.item_price}}</b></h4>
+					</li>
+				</ul>
+				{% endfor %}
+			</div>
+			<!--Looping through the MONGO collection milkshakes-->
+			<div class="milkshakes column">
+				<h3>Milkshakes</h3>
+				<hr>
+				{% for shake in milkshakes %}
+				<ul>
+					<li>
+						<h4>{{shake.item_heading}} <b>€ {{shake.item_price}}</b></h4>
+					</li>
+				</ul>
+				{% endfor %}
+			</div>
 		</div>
-        <!--Looping through the MONGO collection milkshakes-->
-		<div class="milkshakes column">
-			<h3>Milkshakes</h3>
-            <hr>
-			{% for shake in milkshakes %}
-			<ul>      
-				<li>
-					<h4>{{shake.item_heading}} <b>€ {{shake.item_price}}</b></h4>     
-				</li>
-			</ul>
-			{% endfor %}
+		<!--Looping through the MONGO collection gourmet_burgers-->
+		<div class="row">
+			<div class="burgers column">
+				<h3>Gourmet Burgers</h3>
+				<hr>
+				{% for burger in burgers %}
+				<ul>
+					<li>
+						<h4>{{burger.item_heading}} <b>€ {{burger.item_price}}</b></h4>
+						<p><i>{{burger.item_description}}</i></p>
+					</li>
+				</ul>
+				{% endfor %}
+			</div>
+			<!--Looping through the MONGO collection toppings_sides-->
+			<div class="toppings column">
+				<h3>Toppings</h3>
+				<hr>
+				{% for top in toppings %}
+				<ul>
+					<li>
+						<h4>{{top.item_heading}} <b>€ {{top.item_price}}</b></h4>
+					</li>
+				</ul>
+				{% endfor %}
+			</div>
 		</div>
-        </div>
-        <!--Looping through the MONGO collection gourmet_burgers-->
-        <div class="row">
-		<div class="burgers column">
-			<h3>Gourmet Burgers</h3>
-            <hr>
-			{% for burger in burgers %}
-			<ul>
-				<li>
-					<h4>{{burger.item_heading}} <b>€ {{burger.item_price}}</b></h4>
-					<p><i>{{burger.item_description}}</i></p>
-				</li>
-			</ul>
-			{% endfor %}
-		</div>
-        <!--Looping through the MONGO collection toppings_sides-->
-		<div class="toppings column">
-			<h3>Toppings</h3>
-            <hr>
-			{% for top in toppings %}
-			<ul>
-				<li>
-					<h4>{{top.item_heading}} <b>€ {{top.item_price}}</b></h4>
-				</li>
-			</ul>
-			{% endfor %}
-		</div>
-        </div>
 	</div>
-    </section>
+</section>
 
-	<!--Contact section, with a contact form-->
-	<section id="contact-form">
-		<h2>Get in touch</h2>
+<!--Contact section, with a contact form-->
+<section id="contact-form">
+	<h2>Get in touch</h2>
 
-		<!--Contact-form layout with content-->
-		<div class="get-in-touch">
-			<form onsubmit="return sendMail(this);">
-				<div class="row">
+	<!--Contact-form layout with content-->
+	<div class="get-in-touch">
+		<form onsubmit="return sendMail(this);">
+			<div class="row">
+				<div class="column">
+					<input type="text" id="fname" name="firstname" placeholder="First Name" required>
+				</div>
 					<div class="column">
-						<input type="text" id="fname" name="firstname" placeholder="First Name" required>
+						<input type="text" id="lname" name="lastname" placeholder="Second Name" required>
 				</div>
-						<div class="column">
-							<input type="text" id="lname" name="lastname" placeholder="Second Name" required>
-				</div>
-						</div>
-						<input type="text" id="email" name="email" placeholder="Email" required>
-						<input type="text" id="subject" name="subject" placeholder="Subject" required>
-						<textarea name="message" id="message" rows="10" placeholder="Message Here..." required></textarea>
-						<input type="submit" value="Submit" class="reset">
-			</form>
 					</div>
-	</section>
+					<input type="text" id="email" name="email" placeholder="Email" required>
+					<input type="text" id="subject" name="subject" placeholder="Subject" required>
+					<textarea name="message" id="message" rows="10" placeholder="Message Here..." required></textarea>
+					<input type="submit" value="Submit" class="reset">
+			</form>
+				</div>
+</section>
 
-    <footer>
+<footer>
 	<h2>Find us</h2>
-    <div class="row">
-	    <div id="google-location" class="column"></div>
-	    <div id="contact-details" class="column" >
-		    <b>Phone:</b> +353711234567 <br>
-		    <b>Email:</b> lunch@munch.ie <br>
-		    <b>Address:</b><br>
-		    <p>Munch,O'Connell St.,<br> Sligo, Co.Sligo <br>Ireland</p>
-	    </div>
+	<div class="row">
+		<div id="google-location" class="column"></div>
+		<div id="contact-details" class="column">
+			<b>Phone:</b> +353711234567 <br>
+			<b>Email:</b> lunch@munch.ie <br>
+			<b>Address:</b><br>
+			<p>Munch,O'Connell St.,<br> Sligo, Co.Sligo <br>Ireland</p>
+		</div>
 
-    </div>        
-    <div id="footer-responsive">
+	</div>
+	<div id="footer-responsive">
 		<h3>Munch, O'Connell St, Sligo, Co.Sligo</h3><br>
 		<h4>+353711234567 | <i>lunch@munch.ie</i></h4>
 	</div>
-    <div id="social-media">
-        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+	<div id="social-media">
+		<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
 		<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
 		<a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-    </div>
+	</div>
 </footer>
 
-	<!--Location of EmailJS script-->
-	<script src="static/js/sendEmail.js"></script>
+<!--Location of EmailJS script-->
+<script src="static/js/sendEmail.js"></script>
 
-    <!--Location of Google Maps API script-->
-    <script src="static/js/googleMaps.js"></script>
+<!--Location of Google Maps API script-->
+<script src="static/js/googleMaps.js"></script>
 
-    <!--Load Google API from the specified URL with custom APIKEY-->
-	<script defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtVUKreFqu4NdtKT_ExJHoPTyC9YaZKk&callback=initMap">
-	</script>
+<!--Load Google API from the specified URL with custom APIKEY-->
+<script defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtVUKreFqu4NdtKT_ExJHoPTyC9YaZKk&callback=initMap">
+</script>
 
-	<!--Contact form linked to EmailJS-->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function(){
+<!--Contact form linked to EmailJS-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+	(function(){
             emailjs.init("user_dYXdGeorqYYUJK0lclK57");
         })();
-	</script>
+</script>
 
-	{% endblock %}
+{% endblock %}

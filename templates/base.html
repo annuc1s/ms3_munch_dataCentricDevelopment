@@ -4,40 +4,40 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--FontAwesome Library-->
+	<!--FontAwesome Library-->
 	<script src="https://kit.fontawesome.com/a65927cba6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 	<title>Munch</title>
 </head>
 
 <body>
 
-<header>
-    <div id="logo"><a href="index.html">MUNCH!</a></div>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		<i class="fa fa-bars"></i>
-	</a>
-	<nav id="nav-bar">
-		<ul>
-			<li><a class="nav-btn" href="#">ABOUT</a></li>
-			<li><a class="nav-btn" href="{{url_for('get_menu')}}">MENU</a></li>
-			<li><a class="nav-btn" href="#">CONTACT</a></li>
-            <li><a class="nav-btn book-tbl" href="{{url_for('log_in')}}">BOOK TABLE</a></li>
-		</ul>
-	</nav>
-</header>
-<div>
-	{% block content %}
-	{% endblock %}
-</div>
+	<header>
+		<div id="logo"><a href="index.html">MUNCH!</a></div>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+		<nav id="nav-bar">
+			<ul>
+				<li><a class="nav-btn" href="#">ABOUT</a></li>
+				<li><a class="nav-btn" href="{{url_for('get_menu')}}">MENU</a></li>
+				<li><a class="nav-btn" href="#">CONTACT</a></li>
+				<li><a class="nav-btn book-tbl" href="{{url_for('log_in')}}">BOOK TABLE</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div>
+		{% block content %}
+		{% endblock %}
+	</div>
 
-    <!--Location of Responsive Nav Menu script-->
+	<!--Location of Responsive Nav Menu script-->
 	<script src="static/js/responsiveNavMenu.js"></script>
 
-    <!--Location of Google Maps API script-->
-    <script src="static/js/googleMaps.js"></script>
+	<!--Location of Google Maps API script-->
+	<script src="static/js/googleMaps.js"></script>
 
-    <!--Load Google API from the specified URL with custom APIKEY-->
+	<!--Load Google API from the specified URL with custom APIKEY-->
 	<script defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtVUKreFqu4NdtKT_ExJHoPTyC9YaZKk&callback=initMap">
 	</script>

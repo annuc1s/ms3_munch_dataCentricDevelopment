@@ -6,31 +6,31 @@
 			<img src="static/img/log-in.jpg" alt="">
         </div>
 			<div class="log-in-form log-in-column">
-                <h2>Log In</h2>
+				<h2>Log In</h2>
 				<form method="POST" action="{{ url_for('sign_in') }}">
 					<input type="text" placeholder="Username" name="username" required>
 					<input type="password" placeholder="Password" name="pass" required>
 					<button type="submit">Login</button>
-				</form>   
-                   <button class="register-button" onclick="document.getElementById('modal-form').style.display='block'" style="width:auto;">Don't have an account?</button>       
+				</form>
+				<button class="register-button" onclick="document.getElementById('modal-form').style.display='block'" style="width:auto;">Don't have an account?</button>
 			</div>
 		</div>
 	</div>
-   
-    <div id="modal-form" class="modal-container">
-        <form method="POST" action="{{ url_for('sign_up') }}">
-            <span onclick="document.getElementById('modal-form').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <h2>Create Account</h2>            
+
+	<div id="modal-form" class="modal-container">
+		<form method="POST" action="{{ url_for('sign_up') }}">
+			<span onclick="document.getElementById('modal-form').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<h2>Create Account</h2>
 			<input type="text" placeholder="Username" name="username" required>
 			<input type="password" placeholder="Password" name="pass" required>
 			<button type="submit">Register</button>
-            <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
-        </form>
-    </div>
+			<button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
+		</form>
+	</div>
 
-    
-<script>
-// Get the modal
+
+	<script>
+		// Get the modal
 var modal = document.getElementById('modal-form');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -39,6 +39,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-</script>
+	</script>
 
-{% endblock %}
+	{% endblock %}
