@@ -466,6 +466,10 @@ button:hover {
     resize: vertical; 
     font-family: 'Gothic A1', sans-serif;
 }
+
+#reserve-table input[type=date]{
+    text-transform: uppercase;
+}
 /*---------------------Responsive Sizing*/
 
 @media screen and (max-width: 900px){

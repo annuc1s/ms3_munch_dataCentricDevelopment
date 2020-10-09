@@ -69,7 +69,11 @@ def sign_up():
 
 @app.route('/book_table')
 def book_table():
-    return render_template("book-tbl.html")
+    return render_template("book-tbl.html",
+    people=mongo.db.party_size.find()
+    )
+
+
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
