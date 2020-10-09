@@ -3,12 +3,12 @@
 <div id="reserve-table">
     <h2>Make a reservation</h2>
     <form>
-        <input type="text" placeholder="name">
-        <input type="text" placeholder="phone number">
-        <input type="date">
-        <input type="time">
-        <select name="party_size" id="no_people">
-            <option value="select no of people">Party Size</option>
+        <input type="text" placeholder="name" name="reservation_name" id="reservation_name" required>
+        <input type="text" placeholder="phone number" name="contact_number" id="contact_number" required> 
+        <input type="date" name="reservation_date" id="reservation_date" required>
+        <input type="time" name="reservation_time" id="reservation_time" required>
+        <select name="party_size" id="party_size" required>
+            <option value="">Party Size</option>
             <option value="">2</option>
         </select>
         <input type="text" placeholder="additional info">
