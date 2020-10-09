@@ -111,12 +111,7 @@ def reserve_table():
     #reservations.insert_one(request.form.to_dict())
     return redirect(url_for('view_reservation', reservations_id=id.inserted_id))
 
-
-@app.route('/review_reservation')
-def review_reservation():
-    return render_template('review-reservation.html')
-
-
+#retrieving data from users database to display in review-reservations.html & edit-reservations.html
 @app.route('/view_reservation/<reservations_id>', methods=['GET'])
 def view_reservation(reservations_id):
     reserved = mongo.db.reservations.find_one({'_id': ObjectId(reservations_id)})
