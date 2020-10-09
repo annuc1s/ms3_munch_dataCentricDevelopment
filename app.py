@@ -15,13 +15,8 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-#Route to index.html
 @app.route('/home_page')
 def home_page():
-    return render_template("index.html")
-
-@app.route('/get_menu')
-def get_menu():
     #call items from MONGO collection menu_items
     return render_template("index.html",
                            snacks=mongo.db.appetizers_snacks.find(),
@@ -31,15 +26,11 @@ def get_menu():
                            )
 
 #Creates a route to sign-in.html
-
-
 @app.route('/log_in')
 def log_in():
     return render_template("sign-in.html")
 
 # Routing through existing users and decrypting their password from database
-
-
 @app.route('/sign_in', methods=['POST'])
 def sign_in():
     users = mongo.db.users
@@ -84,9 +75,7 @@ def sign_up():
 
 @app.route('/book_table')
 def book_table():
-    return render_template("book-tbl.html",
-                           people=mongo.db.party_size.find()
-                           )
+    return render_template("book-tbl.html")
 
 #Allows reservation form to be submitted
 #and stores data in MongoDB within a reservations collection

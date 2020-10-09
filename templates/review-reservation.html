@@ -3,7 +3,7 @@
 
 <div id="edit-reservation">
 	<h2>Your Reservation</h2>
-	<form action="" method="GET">
+	<form action="{{ url_for('edit_reservation') }}" method="GET">
 		<!--Looping through database to pull up saved reservation data-->    
 		<input disabled value="{{ reservations.reservation_name }}" type="text" name="reservation_name" id="reservation_name">
 		<input disabled value="{{ reservations.contact_number }}" type="text" name="contact_number" id="contact_number">
@@ -11,8 +11,7 @@
 		<input disabled value="{{ reservations.reservation_time }}" type="time" name="reservation_time" id="reservation_time">
 		<input disabled value="{{ reservations.party_size }}" type="text" name="party_size" id="party_size">
         <input disabled value="{{ reservations.additional_info }}" type="text" placeholder="No additional info" name="additional_info" id="additional_info">
-
-		<button href="{{url_for('edit_reservation')}}">Edit</button>
+		<button>Edit</button>
 	</form>
 </div>
 
