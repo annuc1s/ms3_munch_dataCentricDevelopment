@@ -26,6 +26,7 @@ def get_menu():
         milkshakes=mongo.db.milkshakes.find(),
     )
 
+#Creates a route to sign-in.html
 @app.route('/log_in')
 def log_in():
     return render_template("sign-in.html")
@@ -66,13 +67,16 @@ def sign_up():
         return  'This username already exists!'
     return render_template('sign-in.html')
 
-
+#allows for looping through db collection party_size
 @app.route('/book_table')
 def book_table():
     return render_template("book-tbl.html",
     people=mongo.db.party_size.find()
     )
 
+#Allows reservation form to be submitted
+#and stores data in MongoDB within a reservations collection
+#after successful submission, the user is redirected to edit_reservation
 @app.route('/reserve_table', methods=['POST'])
 def reserve_table():
     reservations = mongo.db.reservations
