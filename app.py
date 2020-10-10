@@ -3,8 +3,6 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import bcrypt
-if os.path.exists("env.py"):
-    import env
 
 app = Flask(__name__)
 #database name and uri linking to that database
