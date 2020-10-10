@@ -479,6 +479,7 @@ button:hover {
     margin-bottom: 1%; 
     font-family: 'Gothic A1', sans-serif;
 }
+
 /*---------------------Responsive Sizing*/
 
 @media screen and (max-width: 900px){
@@ -535,6 +536,7 @@ button:hover {
 
 }
 @media screen and (min-width: 600px){
+
     .log-in-container{
         padding-left:1.5rem;
     }
@@ -542,6 +544,15 @@ button:hover {
 
 
 @media screen and (max-width: 760px){
+    .slogan{
+        font-size: 50px;
+        padding-top: 10rem
+    }
+
+    .book-now{
+        background-color: rgba(245, 224, 224, 0.7); 
+    }
+
     #contact-details{
         display: none;
     }
@@ -572,9 +583,5 @@ button:hover {
     .border, form, #google-location{
         margin-left: 5%;
         margin-right: 5%;
-    }
-
-    .slogan{
-        padding-top: 100px;
     }
 }
