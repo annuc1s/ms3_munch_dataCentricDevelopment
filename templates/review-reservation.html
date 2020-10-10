@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div id="hero-image" style="background-image: url(static/img/reservation-lrg.jpg)">
+<div id="hero-image" style="background-image: url(static/img/reservation-lrg2.jpg)">
 <div id="edit-reservation">
 	<h2>Your Reservation</h2>
-    <!--Allows for the reservation to be deleted-->
+	<!--Allows for the reservation to be deleted-->
 	<form action="{{url_for('delete_reservation', reservations_id=reservations._id)}}" method="GET">
-		<!--Looping through database to pull up saved reservation data-->    
+		<!--Looping through database to pull up saved reservation data-->
 		<input disabled value="{{ reservations.reservation_name }}" type="text" name="reservation_name" id="reservation_name">
 		<input disabled value="{{ reservations.contact_number }}" type="text" name="contact_number" id="contact_number">
 		<input disabled value="{{ reservations.reservation_date }}" type="date" name="reservation_date" id="reservation_date">
 		<input disabled value="{{ reservations.reservation_time }}" type="time" name="reservation_time" id="reservation_time">
 		<input disabled value="{{ reservations.party_size }}" type="text" name="party_size" id="party_size">
-        <input disabled value="{{ reservations.additional_info }}" type="text" placeholder="No additional info" name="additional_info" id="additional_info">
-        <button>Delete</button>
+		<input disabled value="{{ reservations.additional_info }}" type="text" placeholder="No additional info" name="additional_info" id="additional_info">
+		<button>Delete</button>
 	</form>
 </div>
 </div>

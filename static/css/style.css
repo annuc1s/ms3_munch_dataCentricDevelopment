@@ -133,7 +133,7 @@ footer h2{
 /*---------------index.html */
 /*---------------hero-image and slogan*/
 #hero-image{
-    height:600px;
+    height:40rem;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -523,6 +523,12 @@ button:hover {
         padding-bottom: 30px;
     }
 
+}
+
+@media screen and (min-width: 1350px){
+    #hero-image{
+        height: 59rem;
+    }
 }
 
 @media screen and (max-width: 760px){
