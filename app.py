@@ -1,6 +1,11 @@
 import os
 import bcrypt
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import (
+    Flask, 
+    render_template, 
+    request, redirect, 
+    url_for, session, 
+)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -12,7 +17,12 @@ app.config["MONGO_URI"] = 'mongodb+srv://RGz8TLF1RmPmQvu9:MunCH_ms3@cluster0.gsp
 
 #variables used throughout the app
 mongo = PyMongo(app)
-
+users = mongo.db.users
+reservations = mongo.db.reservations
+snacks = mongo.db.appetizers_snacks.find()
+burgers = mongo.db.gourmet_burgers.find()
+toppings = mongo.db.toppings_sides.find()
+milkshakes = mongo.db.milkshakes.find()
 
 @app.route('/')
 @app.route('/home_page')
@@ -44,11 +54,8 @@ def sign_in():
             #If the details entered match it will redirect the user book_table
             return redirect(url_for('book_table'))
 
-    return 'Invalid username/password combination'
 
 # Routing through registering a new user and encrypting their password for security
-
-
 @app.route('/sign_up', methods=['POST', 'GET'])
 def sign_up():
     if request.method == 'POST':
@@ -67,7 +74,6 @@ def sign_up():
             # After creating new user date they are redirected to 'book_tbl'
             return redirect(url_for('book_table'))
 
-        return 'This username already exists!'
     return render_template('sign-in.html')
 
 #allows for looping through db collection party_size
@@ -111,7 +117,8 @@ def view_reservation(reservations_id):
 def delete_reservation(reservations_id):
     mongo.db.reservations.remove({'id': ObjectId(reservations_id)})
 
-    return redirect(url_for('book_table'))
+    return redirect(url_for('book_table')),
+    
 
 
 if __name__ == '__main__':

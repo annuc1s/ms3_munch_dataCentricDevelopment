@@ -8,7 +8,6 @@
   border: 0;
   box-sizing: border-box;
 }
-
 /*---------------base.html */
 /*---------------Navigation Bar */
 header{
@@ -186,6 +185,7 @@ footer h2{
     font-family: 'Gothic A1', sans-serif;
     line-height: 25px;
     font-size: 18px;
+    text-align: center;
 }
 
 .border {
@@ -510,6 +510,10 @@ button:hover {
         display: block;
         text-align: right;
         font-size: 1.3rem;
+    }
+
+    #about p{
+        text-align: justify;
     }
 
     #menu .row {
