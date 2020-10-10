@@ -1,5 +1,4 @@
 import os
-import bcrypt
 from flask import (
     Flask, 
     render_template, 
@@ -8,11 +7,14 @@ from flask import (
 )
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import bcrypt
+if os.path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
 #database name and uri linking to that database
 app.config["MONGO_DBNAME"] = 'munch_menu'
-app.config["MONGO_URI"] = 'mongodb+srv://RGz8TLF1RmPmQvu9:MunCH_ms3@cluster0.gsp9j.mongodb.net/munch_menu?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 
 #variables used throughout the app
@@ -117,7 +119,7 @@ def view_reservation(reservations_id):
 @app.route('/delete_reservation/<reservations_id>')
 def delete_reservation(reservations_id):
     mongo.db.reservations.remove({'id': ObjectId(reservations_id)})
-
+#if the deletion was successful it will redirect user back to book-tbl.html
     return redirect(url_for('book_table'))
 
 if __name__ == '__main__':
