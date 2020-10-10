@@ -53,7 +53,8 @@ def sign_in():
             session['username'] = request.form['username']
             #If the details entered match it will redirect the user book_table
             return redirect(url_for('book_table'))
-
+    #If the details are not valid it will reload sign-in.html
+    return redirect(url_for('log_in'))
 
 # Routing through registering a new user and encrypting their password for security
 @app.route('/sign_up', methods=['POST', 'GET'])
@@ -73,8 +74,8 @@ def sign_up():
             session['username'] = request.form['username']
             # After creating new user date they are redirected to 'book_tbl'
             return redirect(url_for('book_table'))
-
-    return render_template('sign-in.html')
+    #if the username already exists it will bring the user to sign-in.html
+    return redirect(url_for('log_in'))
 
 #allows for looping through db collection party_size
 
@@ -117,9 +118,7 @@ def view_reservation(reservations_id):
 def delete_reservation(reservations_id):
     mongo.db.reservations.remove({'id': ObjectId(reservations_id)})
 
-    return redirect(url_for('book_table')),
-    
-
+    return redirect(url_for('book_table'))
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
