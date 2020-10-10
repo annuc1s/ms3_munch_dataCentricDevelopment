@@ -6,7 +6,7 @@
 <div id="hero-image" style="background-image: url(static/img/ms3-hero-image.jpg)">
 	<div class="slogan">
 		<h3>We will save you a seat</h3>
-		<a href="{{url_for('log_in')}}"><button class="book-now">Book Now!</button></a>
+		<button href="{{url_for('log_in')}}" class="book-now">Book Now!</button>
 	</div>
 </div>
 
@@ -140,8 +140,8 @@
 </script>
 
 <!--Contact form linked to EmailJS-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script type="text/javascript">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
 	(function(){
             emailjs.init("user_dYXdGeorqYYUJK0lclK57");
         })();

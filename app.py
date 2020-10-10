@@ -14,7 +14,7 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 #database name and uri linking to that database
 app.config["MONGO_DBNAME"] = 'munch_menu'
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.config["MONGO_URI"] = 'mongodb+srv://RGz8TLF1RmPmQvu9:MunCH_ms3@cluster0.gsp9j.mongodb.net/munch_menu?retryWrites=true&w=majority'
 
 
 #variables used throughout the app
